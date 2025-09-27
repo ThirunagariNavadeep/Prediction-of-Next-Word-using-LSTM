@@ -1,3 +1,11 @@
+import subprocess
+import sys
+
+print("🔎 Installed packages:")
+subprocess.run([sys.executable, "-m", "pip", "list"])
+
+
+
 import streamlit as st
 import numpy as np
 import pickle
@@ -27,5 +35,6 @@ if st.button("Predict Next Word"):
     max_sequence_len = model.input_shape[1]+1
     next_word = predict_next_word(model, tokenizer, input_text, max_sequence_len)
     st.write(f'Next Word:{next_word}')
+
 
 
