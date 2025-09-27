@@ -7,5 +7,5 @@ streamlit
 pandas
 nltk
 scikit-learn
-lit
+
 
